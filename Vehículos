@@ -1,0 +1,42 @@
+class Vehiculo():
+
+    def __init__(self, color, ruedas):
+        self.color = color
+        self.ruedas = ruedas
+
+    def __str__(self):
+        return "color {}, {} ruedas".format( self.color, self.ruedas )
+
+
+class Coche(Vehiculo):
+
+    def __init__(self, color, ruedas, velocidad, cilindrada):
+        super().__init__(color, ruedas)  # utilizamos super()
+        self.velocidad = velocidad
+        self.cilindrada = cilindrada
+
+    def __str__(self):
+        return super().__str__() + ", {} km/h, {} cc".format(
+            self.velocidad, self.cilindrada)
+
+
+# Completa el ejercicio aquí
+
+class Camioneta():
+    pass
+
+
+class Bicicleta():
+    pass
+
+
+class Motocicleta():
+    pass
+
+
+def catalogar():
+    pass
+
+
+def catalogar():
+    pass

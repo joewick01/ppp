@@ -2,7 +2,7 @@
 """
 Created on Wed Jan 22 20:26:21 2020
 
-@author: TEMP REF 01
+@author: Joewick01
 """
 
 class Vehiculo(): #clase nodriza (superclase)
@@ -23,12 +23,11 @@ class Coche(Vehiculo): #clase hija (subclase)
         super().__init__(color, ruedas, marca, modelo)
         self.velocidad = velocidad
         self.cilindrada = cilindrada
-        self.marca = marca
-        self.modelo = modelo
+        
 
     def __str__(self):
-        return super().__str__() + ", {} km/h, {} cc, marca {}, modelo {}".format(
-            self.velocidad, self.cilindrada, self.marca, self.modelo)
+        return super().__str__() + ", {} km/h, {} cc,".format(
+            self.velocidad, self.cilindrada)
 
 
 
@@ -38,8 +37,7 @@ class Camioneta(Coche):
     def __init__(self, color, ruedas, velocidad, cilindrada, carga, marca, modelo):
         super().__init__(color, ruedas, velocidad, cilindrada, marca, modelo)
         self.carga = carga
-        self.marca = marca
-        self.modelo = modelo
+        
         
 
     def __str__(self):
@@ -93,7 +91,7 @@ def catalogar(vehiculos, ruedas=None):
         print("\nSe han encontrado {} vehículos con {} ruedas:".format(
             contador, ruedas))
 
-    # Segnda pasada, mostrar vehículos
+    # Segunda pasada, mostrar vehículos
     for v in vehiculos:
         if ruedas == None:
             print(type(v).__name__, v)
